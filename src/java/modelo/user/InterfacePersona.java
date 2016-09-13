@@ -5,13 +5,16 @@
  */
 package modelo.user;
 
+import java.util.ArrayList;
+import modelo.Curso;
+
 /**
  *
  * @author fabricio
  */
 public interface InterfacePersona {
     
-    public String[] verCursos();
+    public ArrayList<Curso> verCursos();
     
     public int[] verNotas();
 }

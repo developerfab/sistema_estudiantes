@@ -5,6 +5,9 @@
  */
 package modelo.user;
 
+import java.util.ArrayList;
+import modelo.Curso;
+
 /**
  *
  * @author fabricio
@@ -20,13 +23,15 @@ public class Profesor extends Persona {
     }
 
     //METODOS
+    
+
     @Override
-    public String[] verCursos() {
+    public int[] verNotas() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public int[] verNotas() {
+    public ArrayList<Curso> verCursos() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

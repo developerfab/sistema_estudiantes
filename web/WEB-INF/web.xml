@@ -9,9 +9,33 @@
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    <servlet>
+        <servlet-name>ProfesorController</servlet-name>
+        <servlet-class>controlador.ProfesorController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EstudianteController</servlet-name>
+        <servlet-class>controlador.EstudianteController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminController</servlet-name>
+        <servlet-class>controlador.AdminController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProfesorController</servlet-name>
+        <url-pattern>/ProfesorController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EstudianteController</servlet-name>
+        <url-pattern>/EstudianteController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminController</servlet-name>
+        <url-pattern>/AdminController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
