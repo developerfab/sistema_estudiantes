@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelo.user.Estudiante;
 
 /**
  *
@@ -32,15 +33,7 @@ public class ProfesorController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ProfesorController</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ProfesorController at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            
         }
     }
 
@@ -56,7 +49,18 @@ public class ProfesorController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //processRequest(request, response);
+        try{
+            String tema = request.getParameter("theme");
+            if(tema.equals("show_course")){
+                Estudiante es = new Estudiante();
+                es.guardar();
+                response.sendRedirect("estudiante.jsp");
+            }
+        }
+        catch(Exception e){
+            response.sendRedirect("profesor.jsp");
+        }
     }
 
     /**

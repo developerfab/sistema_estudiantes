@@ -7,6 +7,7 @@ package modelo.user;
 
 import java.util.ArrayList;
 import modelo.Curso;
+import modelo.basededatos.SQLiteJDBC;
 
 /**
  *
@@ -34,5 +35,25 @@ public class Profesor extends Persona {
     public ArrayList<Curso> verCursos() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    public boolean guardar(){
+        boolean rta = false;
+        SQLiteJDBC peticion = SQLiteJDBC.getInstance();
+        if(peticion.guardarProfesor(this.nombre, this.documento, this.area)){
+            rta = true;
+            System.out.println("guardado exitosamente");
+        }
+        return rta;
+    }
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
+    
+    
     
 }

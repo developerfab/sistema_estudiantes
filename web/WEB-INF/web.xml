@@ -21,6 +21,18 @@
         <servlet-name>AdminController</servlet-name>
         <servlet-class>controlador.AdminController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RegistroEstudiante</servlet-name>
+        <servlet-class>controlador.RegistroEstudiante</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegistroProfesor</servlet-name>
+        <servlet-class>controlador.RegistroProfesor</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegistroMateria</servlet-name>
+        <servlet-class>controlador.RegistroMateria</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
@@ -36,6 +48,18 @@
     <servlet-mapping>
         <servlet-name>AdminController</servlet-name>
         <url-pattern>/AdminController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistroEstudiante</servlet-name>
+        <url-pattern>/RegistroEstudiante</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistroProfesor</servlet-name>
+        <url-pattern>/RegistroProfesor</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistroMateria</servlet-name>
+        <url-pattern>/RegistroMateria</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

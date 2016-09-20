@@ -11,12 +11,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelo.Materia;
 
 /**
  *
  * @author fabricio
  */
-public class AdminController extends HttpServlet {
+public class RegistroMateria extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,7 +33,11 @@ public class AdminController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            
+            Materia materia = new Materia();
+            materia.setNombre(request.getParameter("materia"));
+            materia.setNivel(Integer.parseInt(request.getParameter("nivel")));
+            boolean state = materia.guardar();
+            response.sendRedirect("registroMateria.jsp");
         }
     }
 
@@ -49,7 +54,7 @@ public class AdminController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //processRequest(request, response);
-        response.sendRedirect("admin.jsp");
+        response.sendRedirect("registroMateria.jsp");
     }
 
     /**

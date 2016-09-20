@@ -5,6 +5,8 @@
  */
 package modelo;
 
+import modelo.basededatos.SQLiteJDBC;
+
 /**
  *
  * @author fabricio
@@ -44,6 +46,16 @@ public class Materia {
      */
     public boolean crearMateria(){
         return true;
+    }
+    
+    public boolean guardar(){
+        boolean rta = false;
+        SQLiteJDBC peticion = SQLiteJDBC.getInstance();
+        if(peticion.guardarMateria(this.nombre, this.nivel)){
+            rta = true;
+            System.out.println("guardado exitosamente");
+        }
+        return rta;
     }
     
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/fabricio/NetBeansProjects/Condor2/web/admin.jsp</file>
+            <file>file:/Users/fabricio/NetBeansProjects/Condor2/web/WEB-INF/web.xml</file>
+            <file>file:/Users/fabricio/NetBeansProjects/Condor2/src/java/modelo/Materia.java</file>
+            <file>file:/Users/fabricio/NetBeansProjects/Condor2/src/java/controlador/RegistroMateria.java</file>
+            <file>file:/Users/fabricio/NetBeansProjects/Condor2/web/registroMateria.jsp</file>
+            <file>file:/Users/fabricio/NetBeansProjects/Condor2/src/java/modelo/user/Estudiante.java</file>
+            <file>file:/Users/fabricio/NetBeansProjects/Condor2/web/index.xhtml</file>
+            <file>file:/Users/fabricio/NetBeansProjects/Condor2/src/java/modelo/basededatos/SQLiteJDBC.java</file>
+        </group>
+    </open-files>
+</project-private>
