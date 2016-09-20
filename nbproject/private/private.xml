@@ -6,7 +6,10 @@
             <file>file:/Users/fabricio/NetBeansProjects/Condor2/web/admin.jsp</file>
             <file>file:/Users/fabricio/NetBeansProjects/Condor2/web/WEB-INF/web.xml</file>
             <file>file:/Users/fabricio/NetBeansProjects/Condor2/src/java/modelo/Materia.java</file>
+            <file>file:/Users/fabricio/NetBeansProjects/Condor2/src/java/modelo/user/Profesor.java</file>
             <file>file:/Users/fabricio/NetBeansProjects/Condor2/src/java/controlador/RegistroMateria.java</file>
+            <file>file:/Users/fabricio/NetBeansProjects/Condor2/src/java/controlador/RegistroProfesor.java</file>
+            <file>file:/Users/fabricio/NetBeansProjects/Condor2/src/java/controlador/ProfesorController.java</file>
             <file>file:/Users/fabricio/NetBeansProjects/Condor2/web/registroMateria.jsp</file>
             <file>file:/Users/fabricio/NetBeansProjects/Condor2/src/java/modelo/user/Estudiante.java</file>
             <file>file:/Users/fabricio/NetBeansProjects/Condor2/web/index.xhtml</file>
