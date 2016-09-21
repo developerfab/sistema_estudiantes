@@ -11,14 +11,20 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.user.Estudiante;
 
 /**
  *
  * @author fabricio
  */
-public class RegistroEstudiante extends HttpServlet {
+public class RegistroEstudiante extends HttpServlet implements InterfaceEstudiante{
 
+    private Presentador presentador;
+    
+    //CONSTRUCTOR
+    public RegistroEstudiante(){
+        this.presentador = new Presentador(this);
+    }
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -32,12 +38,8 @@ public class RegistroEstudiante extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            Estudiante estudiante = new Estudiante();
-            estudiante.setNombre(request.getParameter("nombre_estudiante"));
-            estudiante.setCarrera(request.getParameter("carrera_estudiante"));
-            estudiante.setDocumento(Integer.parseInt(request.getParameter("documento_estudiante")));
-            boolean state = estudiante.guardar();
+            
+            boolean state = presentador.createEstudiante(request.getParameter("nombre_estudiante"), request.getParameter("documento_estudiante"), request.getParameter("carrera_estudiante"));
             response.sendRedirect("registroEstudiante.jsp");
         }
     }
@@ -81,5 +83,35 @@ public class RegistroEstudiante extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    @Override
+    public void setCarrera(String carrera) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getCarrera() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setNombre() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getNombre() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setDocumento() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getDocumento() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }

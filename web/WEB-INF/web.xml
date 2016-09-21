@@ -33,6 +33,10 @@
         <servlet-name>RegistroMateria</servlet-name>
         <servlet-class>controlador.RegistroMateria</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Presentador</servlet-name>
+        <servlet-class>controlador.Presentador</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
@@ -60,6 +64,10 @@
     <servlet-mapping>
         <servlet-name>RegistroMateria</servlet-name>
         <url-pattern>/RegistroMateria</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Presentador</servlet-name>
+        <url-pattern>/Presentador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

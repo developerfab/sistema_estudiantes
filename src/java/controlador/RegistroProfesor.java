@@ -17,8 +17,15 @@ import modelo.user.Profesor;
  *
  * @author fabricio
  */
-public class RegistroProfesor extends HttpServlet {
+public class RegistroProfesor extends HttpServlet implements InterfaceProfesor{
 
+    //ATRIBUTOS
+    private Presentador presentador;
+    
+    //CONSTRUCTOR
+    public RegistroProfesor(){
+        presentador = new Presentador(this);
+    }
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -32,12 +39,9 @@ public class RegistroProfesor extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            Profesor profesor = new Profesor();
-            profesor.setNombre(request.getParameter("nombre_profesor"));
-            profesor.setDocumento(Integer.parseInt(request.getParameter("documento_profesor")));
-            profesor.setArea(request.getParameter("area_profesor"));
-            boolean state = profesor.guardar();
+            boolean state = presentador.createProfesor(request.getParameter("nombre_profesor"), 
+                    request.getParameter("documento_profesor"), 
+                    request.getParameter("area_profesor"));
             response.sendRedirect("registroProfesor.jsp");
         }
     }
@@ -82,5 +86,35 @@ public class RegistroProfesor extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    @Override
+    public void setArea() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getArea() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setNombre() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getNombre() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setDocumento() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getDocumento() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }

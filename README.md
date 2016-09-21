@@ -1,6 +1,7 @@
 # Plataforma para estudiantes
-### Cristian Fabricio Rodriguez Romero
+> Cristian Fabricio Rodriguez Romero
+> 
+> Sergio Gutierrez
 
-Este proyecto aplica los principios de diseño solid y los principios por paquetes 
+Este proyecto aplica el patron de arquitectura MVP
 
-![alt tag](https://raw.githubusercontent.com/fab48/sistema_estudiantes/master/condor2.png)
